@@ -1,0 +1,29 @@
+{
+  "name": "Vertical Tabs",
+  "version": "0.0.1",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "manifest_version": 3,
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "menus.overrideContext"
+  ],
+  "sidebar_action": {
+    "default_icon": "icons/icon128.png",
+    "default_title": "Vertical Tabs",
+    "default_panel": "sidebar.html",
+    "open_at_install": true
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "vertical-tabs@nitinja.in"
+    }
+  }
+}

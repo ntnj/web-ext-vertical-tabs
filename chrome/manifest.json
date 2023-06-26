@@ -1,0 +1,19 @@
+{
+  "name": "Vertical Tabs",
+  "version": "0.0.1",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "manifest_version": 3,
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "sidePanel"
+  ],
+  "side_panel": {
+    "default_path": "sidebar.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
