@@ -1,6 +1,6 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
-import tailwindcss from 'tailwindcss';
+import tailwindcss from '@tailwindcss/vite';
 import { getManifest } from './src/manifest.ts';
 
 export default defineConfig(({ mode }) => {
@@ -23,18 +23,8 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
-    css: {
-      postcss: {
-        plugins: [
-          tailwindcss({
-            content: [
-              './src/**/*.tsx',
-            ],
-          }),
-        ],
-      },
-    },
     plugins: [
+      tailwindcss(),
       {
         name: 'generate-manifest',
         buildStart() {
